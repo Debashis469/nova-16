@@ -1,0 +1,22 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Java build
+*.class
+out/
+
+# Vivado
+*.jou
+*.log
+*.str
+*.cache/
+*.gen/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+
+# OS files
+.DS_Store
+Thumbs.db
