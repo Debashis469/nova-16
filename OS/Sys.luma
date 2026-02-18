@@ -1,0 +1,72 @@
+/**
+ * Sys.jack
+ *
+ * The Sys class is the entry point of the Hack operating system.
+ * It initializes all OS services, starts the user program,
+ * and provides system-level services like halt, error, and wait.
+ */
+
+class Sys {
+
+    /**
+     * Initializes the operating system.
+     * Called automatically by the VM bootstrap code (Chapter 8).
+     */
+    function void init() {
+
+        // Initialize OS subsystems
+        do Memory.init();
+        do Screen.init();
+        do Keyboard.init();
+        do Output.init();
+        do Math.init() ;
+
+        // Start the user program
+        do Main.main();
+
+        // If Main.main() returns, halt the system
+        do Sys.halt();
+        return;
+    }
+
+    /**
+     * Halts program execution by entering an infinite loop.
+     */
+    function void halt() {
+        while (true) {
+        }
+        return;
+    }
+
+    /**
+     * Prints an error code and halts execution.
+     * Used for fatal, unrecoverable system errors.
+     */
+    function void error(int errorCode) {
+        do Output.printString("ERROR: ");
+        do Output.printInt(errorCode);
+        do Output.println();
+
+        do Sys.halt();
+        return;
+    }
+
+    /**
+     * Waits approximately `duration` milliseconds.
+     * Implemented using a busy-wait loop (no hardware timer exists).
+     */
+    function void wait(int duration) {
+        var int i, j;
+
+        let i = 0;
+        while (i < duration) {
+            let j = 0;
+            while (j < 120) {
+                let j = j + 1;
+            }
+            let i = i + 1;
+        }
+
+        return;
+    }
+}
