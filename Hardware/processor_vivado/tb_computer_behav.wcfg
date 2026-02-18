@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_computer_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_computer" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="10.602505001 ms"></ZoomEndTime>
+      <Cursor1Time time="10.602505000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="262"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/tb_computer/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/loadScreen" type="logic">
+      <obj_property name="ElementShortName">loadScreen</obj_property>
+      <obj_property name="ObjectShortName">loadScreen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/address" type="array">
+      <obj_property name="ElementShortName">address[15:0]</obj_property>
+      <obj_property name="ObjectShortName">address[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/screenOut" type="array">
+      <obj_property name="ElementShortName">screenOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">screenOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/ram_addr" type="array">
+      <obj_property name="ElementShortName">ram_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/ram_data_in" type="array">
+      <obj_property name="ElementShortName">ram_data_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_data_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/pc" type="array">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_computer/dut/inst2/pc" type="array">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group229" type="group">
+      <obj_property name="label">screen ram</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/clk_a" type="logic">
+         <obj_property name="ElementShortName">clk_a</obj_property>
+         <obj_property name="ObjectShortName">clk_a</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/in_a" type="array">
+         <obj_property name="ElementShortName">in_a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in_a[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/load_a" type="logic">
+         <obj_property name="ElementShortName">load_a</obj_property>
+         <obj_property name="ObjectShortName">load_a</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/address_a" type="array">
+         <obj_property name="ElementShortName">address_a[12:0]</obj_property>
+         <obj_property name="ObjectShortName">address_a[12:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/out_a" type="array">
+         <obj_property name="ElementShortName">out_a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out_a[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/clk_b" type="logic">
+         <obj_property name="ElementShortName">clk_b</obj_property>
+         <obj_property name="ObjectShortName">clk_b</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/in_b" type="array">
+         <obj_property name="ElementShortName">in_b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in_b[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/load_b" type="logic">
+         <obj_property name="ElementShortName">load_b</obj_property>
+         <obj_property name="ObjectShortName">load_b</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/address_b" type="array">
+         <obj_property name="ElementShortName">address_b[12:0]</obj_property>
+         <obj_property name="ObjectShortName">address_b[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/sc/out_b" type="array">
+         <obj_property name="ElementShortName">out_b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out_b[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/address" type="array">
+         <obj_property name="ElementShortName">address[14:0]</obj_property>
+         <obj_property name="ObjectShortName">address[14:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group233" type="group">
+      <obj_property name="label">rom</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst1/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group245" type="group">
+      <obj_property name="label">Pc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/in" type="array">
+         <obj_property name="ElementShortName">in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/load" type="logic">
+         <obj_property name="ElementShortName">load</obj_property>
+         <obj_property name="ObjectShortName">load</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/inc" type="logic">
+         <obj_property name="ElementShortName">inc</obj_property>
+         <obj_property name="ObjectShortName">inc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/incOut" type="array">
+         <obj_property name="ElementShortName">incOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">incOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/incMux" type="array">
+         <obj_property name="ElementShortName">incMux[15:0]</obj_property>
+         <obj_property name="ObjectShortName">incMux[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/loadMux" type="array">
+         <obj_property name="ElementShortName">loadMux[15:0]</obj_property>
+         <obj_property name="ObjectShortName">loadMux[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/nextOut" type="array">
+         <obj_property name="ElementShortName">nextOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">nextOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst20/feedback" type="array">
+         <obj_property name="ElementShortName">feedback[15:0]</obj_property>
+         <obj_property name="ObjectShortName">feedback[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/pc" type="array">
+         <obj_property name="ElementShortName">pc[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group252" type="group">
+      <obj_property name="label">Areg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst6/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst6/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst6/in" type="array">
+         <obj_property name="ElementShortName">in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst6/load" type="logic">
+         <obj_property name="ElementShortName">load</obj_property>
+         <obj_property name="ObjectShortName">load</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst6/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group257" type="group">
+      <obj_property name="label">mux16inst3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst3/a" type="array">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst3/b" type="array">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst3/sel" type="logic">
+         <obj_property name="ElementShortName">sel</obj_property>
+         <obj_property name="ObjectShortName">sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst3/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group284" type="group">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/x" type="array">
+         <obj_property name="ElementShortName">x[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="Reversed">false</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/y" type="array">
+         <obj_property name="ElementShortName">y[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/zx" type="logic">
+         <obj_property name="ElementShortName">zx</obj_property>
+         <obj_property name="ObjectShortName">zx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/nx" type="logic">
+         <obj_property name="ElementShortName">nx</obj_property>
+         <obj_property name="ObjectShortName">nx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/zy" type="logic">
+         <obj_property name="ElementShortName">zy</obj_property>
+         <obj_property name="ObjectShortName">zy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/ny" type="logic">
+         <obj_property name="ElementShortName">ny</obj_property>
+         <obj_property name="ObjectShortName">ny</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/f" type="logic">
+         <obj_property name="ElementShortName">f</obj_property>
+         <obj_property name="ObjectShortName">f</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/no" type="logic">
+         <obj_property name="ElementShortName">no</obj_property>
+         <obj_property name="ObjectShortName">no</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/zr" type="logic">
+         <obj_property name="ElementShortName">zr</obj_property>
+         <obj_property name="ObjectShortName">zr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/ng" type="logic">
+         <obj_property name="ElementShortName">ng</obj_property>
+         <obj_property name="ObjectShortName">ng</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/x0" type="array">
+         <obj_property name="ElementShortName">x0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x0[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/x1" type="array">
+         <obj_property name="ElementShortName">x1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/x2" type="array">
+         <obj_property name="ElementShortName">x2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x2[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/y0" type="array">
+         <obj_property name="ElementShortName">y0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y0[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/y1" type="array">
+         <obj_property name="ElementShortName">y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/y2" type="array">
+         <obj_property name="ElementShortName">y2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y2[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/andOut" type="array">
+         <obj_property name="ElementShortName">andOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">andOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/addOut" type="array">
+         <obj_property name="ElementShortName">addOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">addOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/out0" type="array">
+         <obj_property name="ElementShortName">out0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out0[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/out1" type="array">
+         <obj_property name="ElementShortName">out1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/outLow" type="array">
+         <obj_property name="ElementShortName">outLow[7:0]</obj_property>
+         <obj_property name="ObjectShortName">outLow[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/outHigh" type="array">
+         <obj_property name="ElementShortName">outHigh[7:0]</obj_property>
+         <obj_property name="ObjectShortName">outHigh[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/o1" type="logic">
+         <obj_property name="ElementShortName">o1</obj_property>
+         <obj_property name="ObjectShortName">o1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/o2" type="logic">
+         <obj_property name="ElementShortName">o2</obj_property>
+         <obj_property name="ObjectShortName">o2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst10/nzr" type="logic">
+         <obj_property name="ElementShortName">nzr</obj_property>
+         <obj_property name="ObjectShortName">nzr</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group289" type="group">
+      <obj_property name="label">mux16cpuinst9</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst9/a" type="array">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst9/b" type="array">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst9/sel" type="logic">
+         <obj_property name="ElementShortName">sel</obj_property>
+         <obj_property name="ObjectShortName">sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst9/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group218" type="group">
+      <obj_property name="label">memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst3/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/in" type="array">
+         <obj_property name="ElementShortName">in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/load" type="logic">
+         <obj_property name="ElementShortName">load</obj_property>
+         <obj_property name="ObjectShortName">load</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/isScreen" type="logic">
+         <obj_property name="ElementShortName">isScreen</obj_property>
+         <obj_property name="ObjectShortName">isScreen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/loadScreen" type="logic">
+         <obj_property name="ElementShortName">loadScreen</obj_property>
+         <obj_property name="ObjectShortName">loadScreen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/address" type="array">
+         <obj_property name="ElementShortName">address[14:0]</obj_property>
+         <obj_property name="ObjectShortName">address[14:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/hsync" type="logic">
+         <obj_property name="ElementShortName">hsync</obj_property>
+         <obj_property name="ObjectShortName">hsync</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/vsync" type="logic">
+         <obj_property name="ElementShortName">vsync</obj_property>
+         <obj_property name="ObjectShortName">vsync</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/R" type="array">
+         <obj_property name="ElementShortName">R[3:0]</obj_property>
+         <obj_property name="ObjectShortName">R[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/G" type="array">
+         <obj_property name="ElementShortName">G[3:0]</obj_property>
+         <obj_property name="ObjectShortName">G[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/B" type="array">
+         <obj_property name="ElementShortName">B[3:0]</obj_property>
+         <obj_property name="ObjectShortName">B[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/ps2_clk" type="logic">
+         <obj_property name="ElementShortName">ps2_clk</obj_property>
+         <obj_property name="ObjectShortName">ps2_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/ps2_data" type="logic">
+         <obj_property name="ElementShortName">ps2_data</obj_property>
+         <obj_property name="ObjectShortName">ps2_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/notA13" type="logic">
+         <obj_property name="ElementShortName">notA13</obj_property>
+         <obj_property name="ObjectShortName">notA13</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/isRAM" type="logic">
+         <obj_property name="ElementShortName">isRAM</obj_property>
+         <obj_property name="ObjectShortName">isRAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/isKeyboard" type="logic">
+         <obj_property name="ElementShortName">isKeyboard</obj_property>
+         <obj_property name="ObjectShortName">isKeyboard</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/loadRAM" type="logic">
+         <obj_property name="ElementShortName">loadRAM</obj_property>
+         <obj_property name="ObjectShortName">loadRAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/ramOut" type="array">
+         <obj_property name="ElementShortName">ramOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ramOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/screenOut" type="array">
+         <obj_property name="ElementShortName">screenOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">screenOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/kbdOut" type="array">
+         <obj_property name="ElementShortName">kbdOut[15:0]</obj_property>
+         <obj_property name="ObjectShortName">kbdOut[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/ramOrScreen" type="array">
+         <obj_property name="ElementShortName">ramOrScreen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ramOrScreen[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/port_b_clk" type="logic">
+         <obj_property name="ElementShortName">port_b_clk</obj_property>
+         <obj_property name="ObjectShortName">port_b_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/ram_addr" type="array">
+         <obj_property name="ElementShortName">ram_addr[12:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_addr[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/ram_data_in" type="array">
+         <obj_property name="ElementShortName">ram_data_in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_data_in[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst3/w_data_to_register" type="array">
+         <obj_property name="ElementShortName">w_data_to_register[7:0]</obj_property>
+         <obj_property name="ObjectShortName">w_data_to_register[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group303" type="group">
+         <obj_property name="label">keyboard</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/ps2_clk" type="logic">
+            <obj_property name="ElementShortName">ps2_clk</obj_property>
+            <obj_property name="ObjectShortName">ps2_clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/ps2_data" type="logic">
+            <obj_property name="ElementShortName">ps2_data</obj_property>
+            <obj_property name="ObjectShortName">ps2_data</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/d_in" type="array">
+            <obj_property name="ElementShortName">d_in[7:0]</obj_property>
+            <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/ps2_clk_sync" type="array">
+            <obj_property name="ElementShortName">ps2_clk_sync[1:0]</obj_property>
+            <obj_property name="ObjectShortName">ps2_clk_sync[1:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/ps2_clk_falling" type="logic">
+            <obj_property name="ElementShortName">ps2_clk_falling</obj_property>
+            <obj_property name="ObjectShortName">ps2_clk_falling</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/shift_reg" type="array">
+            <obj_property name="ElementShortName">shift_reg[10:0]</obj_property>
+            <obj_property name="ObjectShortName">shift_reg[10:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/bit_count" type="array">
+            <obj_property name="ElementShortName">bit_count[3:0]</obj_property>
+            <obj_property name="ObjectShortName">bit_count[3:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/rx_done" type="logic">
+            <obj_property name="ElementShortName">rx_done</obj_property>
+            <obj_property name="ObjectShortName">rx_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/rx_byte" type="array">
+            <obj_property name="ElementShortName">rx_byte[7:0]</obj_property>
+            <obj_property name="ObjectShortName">rx_byte[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/extended" type="logic">
+            <obj_property name="ElementShortName">extended</obj_property>
+            <obj_property name="ObjectShortName">extended</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst3/my_ps2/break_code" type="logic">
+            <obj_property name="ElementShortName">break_code</obj_property>
+            <obj_property name="ObjectShortName">break_code</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group336" type="group">
+         <obj_property name="label">rom</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/tb_computer/dut/inst1/address" type="array">
+            <obj_property name="ElementShortName">address[14:0]</obj_property>
+            <obj_property name="ObjectShortName">address[14:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst1/address" type="array">
+            <obj_property name="ElementShortName">address[14:0]</obj_property>
+            <obj_property name="ObjectShortName">address[14:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_computer/dut/inst1/out" type="array">
+            <obj_property name="ElementShortName">out[15:0]</obj_property>
+            <obj_property name="ObjectShortName">out[15:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group700" type="group">
+      <obj_property name="label">Dreg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst8/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst8/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst8/in" type="array">
+         <obj_property name="ElementShortName">in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst8/load" type="logic">
+         <obj_property name="ElementShortName">load</obj_property>
+         <obj_property name="ObjectShortName">load</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_computer/dut/inst2/inst8/out" type="array">
+         <obj_property name="ElementShortName">out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

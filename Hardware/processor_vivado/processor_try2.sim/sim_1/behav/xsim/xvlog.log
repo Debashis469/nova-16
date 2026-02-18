@@ -1,0 +1,62 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ARegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ARegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Add16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module And
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module And16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Computer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Computer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/DFF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/DRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/FullAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/HalfAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HalfAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Inc16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inc16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Nand.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Nand
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Not
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Not16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Or
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or8Way.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Or8Way
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/new/RAM16K.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM16K
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ROM32K.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM32K
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Screen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Screen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Xor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Xor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ps2_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ps2_interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/vga_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_engine
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_Projects/processor_try2/processor_try2.srcs/sim_1/new/tb_computer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_computer

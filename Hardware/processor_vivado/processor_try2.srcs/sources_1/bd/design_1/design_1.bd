@@ -1,0 +1,498 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB196D7BFEA14EE43",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../processor_try2.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Computer_0": "",
+      "clk_wiz_0": "",
+      "vga_engine_0": "",
+      "Screen_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "ps2_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_ps2_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ps2_data": {
+        "direction": "I"
+      },
+      "vsync": {
+        "direction": "O"
+      },
+      "hsync": {
+        "direction": "O"
+      },
+      "R": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "G": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "B": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Computer_0": {
+        "vlnv": "xilinx.com:module_ref:Computer:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Computer_0_0",
+        "xci_path": "ip\\design_1_Computer_0_0\\design_1_Computer_0_0.xci",
+        "inst_hier_path": "Computer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Computer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "ps2_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_ps2_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ps2_data": {
+            "direction": "I"
+          },
+          "out_a": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "address_a": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          },
+          "load_a": {
+            "direction": "O"
+          },
+          "in_a": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "14",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN2_JITTER_PS": {
+            "value": "166.66"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "159.371"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "40"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "25.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "10"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_INCLK_SWITCHOVER": {
+            "value": "false"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          }
+        }
+      },
+      "vga_engine_0": {
+        "vlnv": "xilinx.com:module_ref:vga_engine:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_vga_engine_0_0",
+        "xci_path": "ip\\design_1_vga_engine_0_0\\design_1_vga_engine_0_0.xci",
+        "inst_hier_path": "vga_engine_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vga_engine",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_40": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "40000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "ram_addr": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          },
+          "ram_data_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "vsync": {
+            "direction": "O"
+          },
+          "R": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "G": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "B": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Screen_0": {
+        "vlnv": "xilinx.com:module_ref:Screen:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Screen_0_0",
+        "xci_path": "ip\\design_1_Screen_0_0\\design_1_Screen_0_0.xci",
+        "inst_hier_path": "Screen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Screen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_a": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "in_a": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "load_a": {
+            "direction": "I"
+          },
+          "address_a": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "out_a": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_b": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "40000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "in_b": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "load_b": {
+            "direction": "I"
+          },
+          "address_b": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "out_b": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Computer_0_B": {
+        "ports": [
+          "vga_engine_0/B",
+          "B"
+        ]
+      },
+      "Computer_0_G": {
+        "ports": [
+          "vga_engine_0/G",
+          "G"
+        ]
+      },
+      "Computer_0_R": {
+        "ports": [
+          "vga_engine_0/R",
+          "R"
+        ]
+      },
+      "Computer_0_address_a": {
+        "ports": [
+          "Computer_0/address_a",
+          "Screen_0/address_a"
+        ]
+      },
+      "Computer_0_hsync": {
+        "ports": [
+          "vga_engine_0/hsync",
+          "hsync"
+        ]
+      },
+      "Computer_0_in_a": {
+        "ports": [
+          "Computer_0/in_a",
+          "Screen_0/in_a"
+        ]
+      },
+      "Computer_0_load_a": {
+        "ports": [
+          "Computer_0/load_a",
+          "Screen_0/load_a"
+        ]
+      },
+      "Computer_0_vsync": {
+        "ports": [
+          "vga_engine_0/vsync",
+          "vsync"
+        ]
+      },
+      "Screen_0_out_a": {
+        "ports": [
+          "Screen_0/out_a",
+          "Computer_0/out_a"
+        ]
+      },
+      "Screen_0_out_b": {
+        "ports": [
+          "Screen_0/out_b",
+          "vga_engine_0/ram_data_in"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "vga_engine_0/clk_40",
+          "Screen_0/clk_b"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "Screen_0/clk_a",
+          "Computer_0/clk"
+        ]
+      },
+      "ps2_clk_0_1": {
+        "ports": [
+          "ps2_clk",
+          "Computer_0/ps2_clk"
+        ]
+      },
+      "ps2_data_0_1": {
+        "ports": [
+          "ps2_data",
+          "Computer_0/ps2_data"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "rst",
+          "clk_wiz_0/reset",
+          "vga_engine_0/rst",
+          "Computer_0/reset"
+        ]
+      },
+      "vga_engine_0_ram_addr": {
+        "ports": [
+          "vga_engine_0/ram_addr",
+          "Screen_0/address_b"
+        ]
+      }
+    }
+  }
+}

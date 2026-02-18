@@ -1,0 +1,39 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/ALU.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/ARegister.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Add16.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And16.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Bit.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/CPU.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Computer.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/DFF.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/DRegister.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/FullAdder.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/HalfAdder.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Inc16.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/Keyboard.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Memory.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux16.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/Nand.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not16.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or8Way.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/PC.v" \
+"../../../../processor_try2.srcs/sources_1/new/RAM16K.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/ROM32K.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Register.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/Screen.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Xor.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/ps2_interface.v" \
+"../../../../processor_try2.srcs/sources_1/imports/sources_1/new/vga_engine.v" \
+"../../../../processor_try2.srcs/sim_1/new/tb_computer.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

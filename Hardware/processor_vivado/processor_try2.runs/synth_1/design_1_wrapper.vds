@@ -1,0 +1,427 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Feb  1 20:25:24 2026
+# Process ID: 10680
+# Current directory: C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1\vivado.jou
+# Running On        :Saurav
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :13th Gen Intel(R) Core(TM) i5-13450HX
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :16944 MB
+# Swap memory       :18420 MB
+# Total Virtual     :35364 MB
+# Available Virtual :10868 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 592.680 ; gain = 240.066
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Vivado_Projects/processor_try2/processor_try2.srcs/utils_1/imports/synth_1/Computer.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Vivado_Projects/processor_try2/processor_try2.srcs/utils_1/imports/synth_1/Computer.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top design_1_wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29740
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1468.820 ; gain = 449.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Computer_0_0' [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_Computer_0_0/synth/design_1_Computer_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Computer' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Computer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM32K' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ROM32K.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'ROM32K' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ROM32K.v:41]
+WARNING: [Synth 8-689] width (16) of port connection 'address' does not match port width (15) of module 'ROM32K' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Computer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/CPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Not' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Nand' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Nand.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Nand' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Nand.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Not' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Mux16' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Mux' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'And' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'And' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Or' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Or' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Mux' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Mux16' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Mux16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ARegister' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ARegister.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Bit' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Bit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DFF' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/DFF.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DFF' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/DFF.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Bit' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ARegister' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ARegister.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DRegister' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/DRegister.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DRegister' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/DRegister.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Not16' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Not16' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Not16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'And16' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'And16' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/And16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Add16' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Add16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FullAdder' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/FullAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'HalfAdder' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/HalfAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Xor' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Xor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Xor' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Xor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'HalfAdder' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/HalfAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FullAdder' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/FullAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Add16' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Add16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Or8Way' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or8Way.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Or8Way' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Or8Way.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Inc16' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Inc16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Inc16' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Inc16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Register' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Register' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/CPU.v:1]
+WARNING: [Synth 8-689] width (15) of port connection 'pc' does not match port width (16) of module 'CPU' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Computer.v:34]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM16K' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/new/RAM16K.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'RAM16K' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/new/RAM16K.v:26]
+INFO: [Synth 8-6157] synthesizing module 'ps2_interface' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ps2_interface.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_interface' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/ps2_interface.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Keyboard' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Keyboard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Keyboard' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Keyboard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Computer' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/imports/NandtoTetris_verilog/Computer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Computer_0_0' (0#1) [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_Computer_0_0/synth/design_1_Computer_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Screen_0_0' [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_Screen_0_0/synth/design_1_Screen_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Screen' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Screen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Screen' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/Screen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Screen_0_0' (0#1) [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_Screen_0_0/synth/design_1_Screen_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:66]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:66]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73643]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73643]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82388]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 25.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82388]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' (0#1) [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:66]
+INFO: [Synth 8-6157] synthesizing module 'design_1_vga_engine_0_0' [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_vga_engine_0_0/synth/design_1_vga_engine_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'vga_engine' [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/vga_engine.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_engine' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.srcs/sources_1/imports/sources_1/new/vga_engine.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_vga_engine_0_0' (0#1) [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_vga_engine_0_0/synth/design_1_vga_engine_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [C:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+WARNING: [Synth 8-7129] Port reset in module RAM16K is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1591.980 ; gain = 572.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1591.980 ; gain = 572.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1591.980 ; gain = 572.637
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1593.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Vivado_Projects/processor_try2/processor_try2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Vivado_Projects/processor_try2/processor_try2.srcs/constrs_1/new/constr.xdc]
+Finished Parsing XDC File [C:/Vivado_Projects/processor_try2/processor_try2.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Vivado_Projects/processor_try2/processor_try2.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1699.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1699.391 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.391 ; gain = 680.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.391 ; gain = 680.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0/inst. (constraint file  C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1/dont_touch.xdc, line 22).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Computer_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/vga_engine_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Screen_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.391 ; gain = 680.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1699.391 ; gain = 680.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 52    
++---Muxes : 
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 5     
+	   3 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port address[14] in module ROM32K is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[13] in module ROM32K is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element inst/ram_reg was removed. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:11 . Memory (MB): peak = 1790.852 ; gain = 771.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|ROM32K      | mem        | 8192x16       | LUT            | 
+|ROM32K      | p_0_out    | 8192x16       | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++----------------------+--------------------------+-----------+----------------------+-------------------+
+|Module Name           | RTL Object               | Inference | Size (Depth x Width) | Primitives        | 
++----------------------+--------------------------+-----------+----------------------+-------------------+
+|design_1_i/Computer_0 | inst/inst3/inst7/mem_reg | Implied   | 16 K x 16            | RAM256X1S x 1024  | 
+|design_1_i/Screen_0   | inst/ram_reg             | Implied   | 8 K x 16             | RAM128X1D x 1024  | 
++----------------------+--------------------------+-----------+----------------------+-------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 1790.852 ; gain = 771.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 1832.523 ; gain = 813.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++----------------------+--------------------------+-----------+----------------------+-------------------+
+|Module Name           | RTL Object               | Inference | Size (Depth x Width) | Primitives        | 
++----------------------+--------------------------+-----------+----------------------+-------------------+
+|design_1_i/Computer_0 | inst/inst3/inst7/mem_reg | Implied   | 16 K x 16            | RAM256X1S x 1024  | 
+|design_1_i/Screen_0   | inst/ram_reg             | Implied   | 8 K x 16             | RAM128X1D x 1024  | 
++----------------------+--------------------------+-----------+----------------------+-------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:34 . Memory (MB): peak = 1842.004 ; gain = 822.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:39 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:39 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:40 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:40 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:40 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:01:40 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     3|
+|2     |LUT1       |     3|
+|3     |LUT2       |    66|
+|4     |LUT3       |    43|
+|5     |LUT4       |   148|
+|6     |LUT5       |   371|
+|7     |LUT6       |  3003|
+|8     |MMCME2_ADV |     1|
+|9     |MUXF7      |   748|
+|10    |MUXF8      |   302|
+|11    |RAM128X1D  |  1024|
+|12    |RAM256X1S  |  1024|
+|13    |FDRE       |   432|
+|14    |IBUF       |     4|
+|15    |OBUF       |    14|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:01:40 . Memory (MB): peak = 1846.727 ; gain = 827.383
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:15 ; elapsed = 00:01:35 . Memory (MB): peak = 1846.727 ; gain = 719.973
+Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:01:40 . Memory (MB): peak = 1846.727 ; gain = 827.383
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1851.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3099 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1862.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2048 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1024 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 1024 instances
+
+Synth Design complete | Checksum: 3bf11cb2
+INFO: [Common 17-83] Releasing license: Synthesis
+111 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:56 . Memory (MB): peak = 1862.637 ; gain = 1257.051
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1862.637 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Vivado_Projects/processor_try2/processor_try2.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  1 20:27:54 2026...
