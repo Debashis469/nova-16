@@ -1,0 +1,221 @@
+/**
+ * String Implementation Details:
+ * - Strings are stored as character arrays with metadata
+ * - First element (index 0) stores maxLength
+ * - Second element (index 1) stores current length
+ * - Characters start at index 2
+ */
+
+class String {
+    field Array buffer;      // Internal character storage
+    field int maxLen;        // Maximum capacity
+    field int currLen;       // Current string length
+
+    /**
+     * Constructs a new empty string with maximum length
+     * User POV: Creates empty string like s = String.new(50)
+     * Low-level: Allocates array in heap, initializes metadata
+     */
+    constructor String new(int maxLength) {
+        if (maxLength < 0) {
+            do Sys.error(14); // Negative max length error
+        }
+
+        // Handle edge case: empty string
+        if (maxLength = 0) {
+            let maxLen = 0;
+            let currLen = 0;
+            let buffer = Array.new(1); // Minimal allocation
+            return this;
+        }
+
+        let maxLen = maxLength;
+        let currLen = 0;
+
+        let buffer = Array.new(maxLength);
+
+        return this;
+    }
+
+    /**
+     * Deallocates the string
+     * User POV: Cleans up when done with string
+     * Low-level: Releases heap memory back to OS
+     */
+    method void dispose() {
+        // Memory.deAlloc reclaims heap space
+        // Must dispose array before object
+        if (~(buffer = null)) {
+            do buffer.dispose();
+        }
+        // 'Memory.deAlloc(this)' is implicit in Jack
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+    method int length() {
+        return currLen;
+    }
+
+
+    method char charAt(int j) {
+        if ((j < 0) | (j > (currLen - 1))) {
+            do Sys.error(15); // Out of bounds error
+        }
+        return buffer[j];
+    }
+
+
+    method void setCharAt(int j, char c) {
+        if ((j < 0) | (j > (currLen - 1))) {
+            do Sys.error(16); // Out of bounds error
+        }
+        let buffer[j] = c;
+        return;
+    }
+
+
+    method String appendChar(char c) {
+        if (currLen < maxLen) {
+            let buffer[currLen] = c;
+            let currLen = currLen + 1;
+        } else {
+            do Sys.error(17); // String overflow error
+        }
+        return this;
+    }
+
+
+    method void eraseLastChar() {
+        if (currLen > 0) {
+            let currLen = currLen - 1;
+        }
+        return;
+    }
+
+    /**
+     * Converts string to integer value
+     * User POV: "123" becomes 123, "-45" becomes -45
+     * Low-level: Iterates chars, multiplies/adds like polynomial
+     * Algorithm: val = val*10 + (char - 48) for each digit
+     */
+    method int intValue() {
+        var int val, i, digit;
+        var boolean isNeg;
+
+        let val = 0;
+        let i = 0;
+        let isNeg = false;
+
+        // Check for negative sign
+        if ((currLen > 0) & (buffer[0] = 45)) { // ASCII '-' = 45
+            let isNeg = true;
+            let i = 1;
+        }
+
+        // Process each digit character
+        while (i < currLen) {
+            let digit = buffer[i];
+
+            // Check if character is a digit (ASCII 48-57 = '0'-'9')
+            if ((digit > 47) & (digit < 58)) {
+                // Convert ASCII to numeric: '0'=48, so '5'=53 -> 53-48=5
+                let val = (val * 10) + (digit - 48);
+            } else {
+                // Non-digit found, stop conversion
+                let i = currLen; // Exit loop
+            }
+            let i = i + 1;
+        }
+
+        if (isNeg) {
+            let val = -val;
+        }
+
+        return val;
+    }
+
+    /**
+     * Sets string to represent integer j
+     * User POV: s.setInt(456) makes s = "456"
+     * Algorithm: Recursive digit extraction, then reversal
+     */
+    method void setInt(int j) {
+        var int lastDigit, absVal, divVal;
+        var char charDigit;
+
+        // Reset string
+        let currLen = 0;
+
+        // Handle negative numbers
+        if (j < 0) {
+            do appendChar(45); // '-' character
+            let absVal = -j;   // Work with absolute value
+        } else {
+            let absVal = j;
+        }
+
+        // Extract and append digits
+        do int2String(absVal);
+
+        return;
+    }
+
+    /**
+     * Helper method: Recursively converts int to string
+     * Low-level: Divides by 10 to extract digits right-to-left
+     * Uses call stack to reverse digit order naturally
+     */
+    method void int2String(int val) {
+        var int lastDigit, nextVal;
+        var char c;
+
+        // Base case
+        if (val < 10) {
+            // Convert digit to ASCII: 5 -> '5' (ASCII 53)
+            let c = val + 48;
+            do appendChar(c);
+            return;
+        }
+
+        // Recursive case: process all but last digit first
+        let lastDigit = val - ((val / 10) * 10); // Modulo 10
+        let nextVal = val / 10;
+
+        do int2String(nextVal);
+
+        // Then append current digit (reverses order)
+        let c = lastDigit + 48;
+        do appendChar(c);
+
+        return;
+    }
+
+    /**
+     * Returns newline character
+     * User POV: String.newLine() gives line break char
+     * Low-level: Returns ASCII 128 (Jack's newline)
+     */
+    function char newLine() {
+        return 128;
+    }
+
+    /**
+     * Returns backspace character
+     * User POV: String.backSpace() gives backspace char
+     * Low-level: Returns ASCII 129 (Jack's backspace)
+     */
+    function char backSpace() {
+        return 129;
+    }
+
+    /**
+     * Returns double quote character
+     * User POV: String.doubleQuote() gives " character
+     * Low-level: Returns ASCII 34
+     */
+    function char doubleQuote() {
+        return 34;
+    }
+}

@@ -1,0 +1,88 @@
+// test.vm
+// Entry point: Sys.init (the translator already calls Sys.init during bootstrap).
+// This file demonstrates program flow and function calls.
+// It computes sum = 1 + 2 + ... + n, with n pushed by Sys.init (change constant to test).
+
+// -----------------------------
+// Sys.init: push n and call Main.main
+// -----------------------------
+function Sys.init 0
+    // set n (change this constant to test other values)
+    push constant 6
+    // call Main.main with 1 argument (n)
+    call Main.main 1
+
+    // When Main.main returns, the result (sum) is on the stack.
+    // We'll store it into a static variable and then loop forever.
+    // This demonstrates static segment usage.
+    pop static 0      // store result in test.0
+
+    // Demonstrate reading it back into the stack
+    push static 0
+
+    // keep program alive: infinite loop using label/goto
+    label SYS_END
+    goto SYS_END
+// End Sys.init
+
+
+
+// -----------------------------
+// Main.main: compute sum(1..n)
+// Arguments:
+//   argument 0 -> n
+// Locals:
+//   local 0 -> sum (initialized to 0)
+//   local 1 -> i   (initialized to 1)
+// -----------------------------
+function Main.main 2
+    // initialize locals
+    push constant 0
+    pop local 0      // sum = 0
+
+    push constant 1
+    pop local 1      // i = 1
+
+    // loop start
+    label MAIN_LOOP
+
+    // if i > n then goto MAIN_END
+    push local 1     // push i
+    push argument 0  // push n
+    gt               // compares local1 > argument0
+    if-goto MAIN_END
+
+    // sum = sum + i
+    push local 0
+    push local 1
+    add
+    pop local 0
+
+    // i = i + 1
+    push local 1
+    push constant 1
+    add
+    pop local 1
+
+    // continue loop
+    goto MAIN_LOOP
+
+    // end loop: push sum and return
+    label MAIN_END
+    push local 0     // push sum (return value on stack)
+
+    // --- extra demonstration of temp/pointer/static usage before return ---
+    // store a constant in temp 2
+    push constant 123
+    pop temp 2
+
+    // copy temp 2 back to static 1 (test.1)
+    push temp 2
+    pop static 1
+
+    // set pointer 0 (THIS) to 0 just to show pointer usage (not used further)
+    push constant 0
+    pop pointer 0
+
+    return
+// End Main.main

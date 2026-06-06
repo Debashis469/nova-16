@@ -1,0 +1,180 @@
+/**
+ * Memory.jack
+ *
+ * This library provides heap memory management for Jack programs.
+ *
+ * HEAP LAYOUT:
+ * ------------
+ * RAM[2048..16383] = Heap space (14336 words)
+ *
+ * BLOCK STRUCTURE (FREE AND ALLOCATED):
+ * --------------------------------------
+ * ALL blocks have the same structure:
+ *   block[0] = size (number of words available for user data)
+ *   block[1] = next (pointer to next free block, or garbage if allocated)
+ *   block[2..size+1] = data area (user gets pointer to block[2])
+ *
+ * This means:
+ * - Minimum allocatable size = 1 word
+ * - Overhead per block = 2 words (size + next)
+ * - User gets pointer to block+2
+ *
+ * Example: User requests 5 words
+ *   Block structure:
+ *   [size=5][next=X][data][data][data][data][data]
+ *    block  block+1 block+2 ... block+6
+ *    ↑               ↑
+ *    block base      user gets this pointer
+ */
+
+class Memory {
+    static Array ram;
+    static int freeList;
+    static int heapBase;
+    static int heapEnd;
+
+    /** Initializes the memory system */
+    function void init() {
+        let ram = 0;          // RAM starts at address 0
+        let heapBase = 2048;  // Heap starts at 2048
+        let heapEnd = 16384;  // Heap ends at 16383 (last usable address)
+
+        // Initialize free list with one large block
+        let freeList = heapBase;
+
+        let ram[heapBase] = heapEnd - heapBase - 2;  // size = 14334
+        let ram[heapBase + 1] = 0;                   // next = null
+
+        return;
+    }
+
+    /** Returns the RAM value at the given address */
+    function int peek(int address) {
+        return ram[address];
+    }
+
+    /** Sets the RAM value at the given address to the given value */
+    function void poke(int address, int value) {
+        let ram[address] = value;
+        return;
+    }
+
+    /**
+     * Allocates a memory block of the given size.
+     * Returns the base address of the user data area (block + 2).
+     *
+     * ALGORITHM: First-fit
+     * - Traverse free list
+     * - Find first block where size >= requested
+     * - Split block if remaining size > 2 (can form valid block)
+     * - Return pointer to data area (block + 2)
+     *
+     * @param size Number of words requested by user
+     * @return Pointer to data area (or -1 if allocation failed)
+     */
+    function int alloc(int size) {
+        var int current, prev, blockSize, remaining, newBlock;
+
+        // Edge case: Invalid size
+        if (size < 1) {
+            do Sys.error(5);  // Illegal allocation size
+            return -1;
+        }
+
+        let current = freeList;
+        let prev = 0;
+
+        // Traverse free list to find suitable block (first-fit)
+        while (~(current = 0)) {
+            let blockSize = ram[current];  // Get size of current block
+
+
+            // blockSize must be >= size (no extra overhead needed!)
+            if (~(blockSize < size)) {
+
+                let remaining = blockSize - size;
+
+                // CASE 1: Remaining space is too small (< 3) -> allocate the entire block
+                if (remaining < 3) {
+                    if (prev = 0) {
+                        let freeList = ram[current + 1];  // freeList = current.next
+                    } else {
+                        let ram[prev + 1] = ram[current + 1];  // prev.next = current.next
+                    }
+
+                    return current + 2;  //user gets pointed to data area
+                }
+
+                // CASE 2: Remaining space is large enough (>= 3) -> split
+                else {
+                    let newBlock = current + size + 2;
+
+                    let ram[newBlock] = remaining - 2;        // size of new block
+                    let ram[newBlock + 1] = ram[current + 1]; // next = old current.next
+
+                    // Update free list to point to new block
+                    if (prev = 0) {
+                        let freeList = newBlock;
+                    } else {
+                        let ram[prev + 1] = newBlock;  // prev.next = newBlock
+                    }
+
+                    let ram[current] = size;
+                    // ram[current + 1] becomes garbage (was next pointer)
+
+                    // Return pointer to data area
+                    return current + 2;
+                }
+            }
+
+            let prev = current;
+            let current = ram[current + 1];  // current = current.next
+        }
+
+        // No suitable block found
+        do Sys.error(6);  // Heap overflow
+        return -1;
+    }
+
+    /**
+     * De-allocates the given object (frees its memory).
+     *
+     * ALGORITHM: Add to front of free list
+     * - Get block address (object - 2, where size is stored)
+     * - Set block.next = current freeList
+     * - Set freeList = block
+     *
+     * Note: No coalescing implemented (adjacent blocks are not merged)
+     *
+     * @param object Pointer to data area (as returned by alloc)
+     */
+    function void deAlloc(Array object) {
+        var int block, size;
+
+        // Edge case: Null pointer
+        if (object = 0) {
+            return;  // Silently ignore null deallocation
+        }
+
+        // User has pointer to data area (block + 2)
+        // Block base is 2 words before
+        let block = object - 2;
+
+        // Get size of block (stored at block address)
+        let size = ram[block];
+
+        // Edge case: Invalid block (sanity check)
+        if (size < 1) {
+            do Sys.error(9);  // Illegal deallocation
+            return;
+        }
+
+        // Add block to front of free list
+        let ram[block + 1] = freeList;
+
+        // Update freeList to point to this block
+        let freeList = block;
+
+        return;
+    }
+}

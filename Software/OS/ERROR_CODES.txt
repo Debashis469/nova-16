@@ -1,0 +1,81 @@
+Hack OS – Error Codes Reference
+===============================
+
+This document defines fatal error codes used by Sys.error(int errorCode).
+All error codes represent unrecoverable system errors.
+Upon error, the system prints the code and halts execution.
+
+
+--------------------------------------------------
+MEMORY / HEAP MANAGEMENT ERRORS (Memory.jack)
+--------------------------------------------------
+
+Error Code: 5
+Name      : INVALID_ALLOCATION_SIZE
+Meaning   : Memory.alloc() was called with size < 1.
+Cause     : Program requested an illegal memory block size.
+Example   : alloc(0) or alloc(-3)
+Action    : System halts to prevent heap corruption.
+
+
+Error Code: 6
+Name      : HEAP_OVERFLOW
+Meaning   : Memory.alloc() failed to find a suitable free block.
+Cause     : Heap exhausted or fragmented beyond recovery.
+Example   : Total free memory exists, but no block is large enough.
+Action    : System halts (out-of-memory condition).
+
+
+Error Code: 9
+Name      : INVALID_DEALLOCATION
+Meaning   : Memory.deAlloc() detected an invalid memory block.
+Cause     : Corrupted block header or illegal pointer.
+Example   : deAlloc(pointer) where block size < 1.
+Action    : System halts to prevent heap corruption.
+
+
+--------------------------------------------------
+GENERAL SYSTEM ERRORS (Sys / OS)
+--------------------------------------------------
+
+Error Code: 1
+Name      : GENERIC_FATAL_ERROR
+Meaning   : Unspecified fatal system error.
+Cause     : Used as a fallback for unexpected conditions.
+Action    : System halts.
+
+
+Error Code: 2
+Name      : NULL_POINTER_ERROR
+Meaning   : Illegal use of a null memory reference.
+Cause     : Attempt to dereference address 0.
+Action    : System halts.
+
+
+Error Code: 3
+Name      : STACK_OVERFLOW
+Meaning   : Stack memory exceeded safe bounds.
+Cause     : Excessive recursion or stack misuse.
+Action    : System halts.
+
+
+Error Code: 4
+Name      : ILLEGAL_OPERATION
+Meaning   : An illegal or undefined operation was attempted.
+Cause     : OS invariant violation.
+Action    : System halts.
+
+
+--------------------------------------------------
+DESIGN NOTES
+--------------------------------------------------
+
+• Error codes are NOT standardized by the Nand2Tetris specification.
+• Meanings are defined by OS designers and programmers.
+• Sys.error(errorCode) is equivalent to a kernel panic.
+• Once an error occurs, execution MUST NOT continue.
+• Numbers are preferred over strings to minimize heap usage.
+
+--------------------------------------------------
+END OF FILE
+--------------------------------------------------

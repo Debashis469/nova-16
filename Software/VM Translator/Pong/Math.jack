@@ -1,0 +1,165 @@
+class Math {
+
+    static Array twoToThe;   // twoToThe[j] = 2^j (j = 0..15)
+
+    /** Initializes the Math library. Internal use only. */
+    function void init() {
+        var int i;
+
+        let twoToThe = Array.new(16);
+        let twoToThe[0] = 1;
+
+        let i = 1;
+        while (i < 15) {
+            let twoToThe[i] = twoToThe[i - 1] + twoToThe[i - 1];
+            let i = i + 1;
+        }
+        return;
+    }
+
+    /** Returns the absolute value of x. */
+    function int abs(int x) {
+        if (x < 0) {
+            return -x;
+        }
+        return x;
+    }
+
+    /** Returns true iff the j-th bit of non-negative x is 1. */
+   function boolean bit(int x, int j) {
+       var int mask;
+
+       let mask = twoToThe[j];
+       return ~((x & mask) = 0);
+   }
+
+    /** Returns the product of x and y. */
+    function int multiply(int x, int y) {
+        var int result;
+        var int i;
+        var int a;
+        var int b;
+        var boolean negX, negY;
+
+        let result = 0;
+
+        // work with magnitudes
+        let a = x;
+        let b = y;
+
+        let negX = x < 0;
+        let negY = y < 0;
+
+        // handle sign
+        if (negX) { let a = -a; }
+        if (negY) { let b = -b; }
+
+        let i = 0;
+        while (i < 15) {
+            if (Math.bit(b, i)) {
+                let result = result + a;
+            }
+            let a = a + a;
+            let i = i + 1;
+        }
+
+        // restore sign (XOR logic: negative if signs differ)
+        if ((negX & (~negY)) | ((~negX) & negY)) {
+            return -result;
+        }
+
+        return result;
+    }
+
+    /** Returns the integer part of x / y. Assumes y != 0. */
+    function int divide(int x, int y) {
+        var int a;
+        var int b;
+        var int q;
+        var boolean negX, negY;
+
+        let a = x;
+        let b = y;
+
+        let negX = x < 0;
+        let negY = y < 0;
+
+        if (negX) { let a = -a; }
+        if (negY) { let b = -b; }
+
+        let q = Math.dividePos(a, b);
+
+        // negative if signs differ
+        if ((negX & (~negY)) | ((~negX) & negY)) {
+            return -q;
+        }
+        return q;
+    }
+
+
+    /** Helper: divides two non-negative numbers using doubling. */
+    function int dividePos(int x, int y) {
+        var int q;
+        var int yy;
+        var int qTimesY;
+
+        if (y > x) {
+            return 0;
+        }
+
+        let yy = y + y;
+
+        // Check for overflow: if yy is negative, y + y wrapped around
+        if (yy < 0) {
+            return 0;
+        }
+
+        let q = Math.dividePos(x, yy);
+
+        let qTimesY = (q + q) * y;
+
+        if ((x - qTimesY) < y) {
+            return q + q;
+        }
+        return (q + q) + 1;
+    }
+
+    /** Returns the minimum of x and y. */
+    function int min(int x, int y) {
+        if (x < y) {
+            return x;
+        }
+        return y;
+    }
+
+    /** Returns the maximum of x and y. */
+    function int max(int x, int y) {
+        if (x > y) {
+            return x;
+        }
+        return y;
+    }
+
+    /** Returns the integer part of sqrt(x). Assumes x >= 0. */
+    function int sqrt(int x) {
+        var int y;
+        var int j;
+        var int t;
+        var int sq;
+
+        let y = 0;
+        let j = 7;   // since sqrt(2^16) = 2^8, we need bits 7..0
+
+        while (j > -1) {
+            let t = y + twoToThe[j];
+            let sq = t * t;
+
+            // guard against overflow and check if sq <= x
+            if ((~(sq < 0)) & (~(sq > x))) {
+                let y = t;
+            }
+            let j = j - 1;
+        }
+        return y;
+    }
+}

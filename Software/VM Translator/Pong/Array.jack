@@ -1,0 +1,45 @@
+/**
+ * Arrays in Jack are NOT objects with methods!
+ * They are simply contiguous blocks of memory.
+ *
+ * Key Design Decisions:
+ * 1. Array.new() is a FUNCTION, not a constructor
+ *    - Returns memory address (int), not Array object
+ *    - No 'this' reference, no fields
+ *
+ * 2. dispose() is a METHOD
+ *    - Called on the array reference: do arr.dispose()
+ *    - But 'arr' is just an int (memory address)
+ *    - Jack allows this syntax for backwards compatibility
+ *
+ * 3. Array access: arr[i]
+ *    - Compiler translates to: *(arr + i)
+ *    - Direct memory access at address (arr + i)
+ *
+ * Why this design?
+ * - Maximum performance: no overhead beyond raw memory
+ * - Simplicity: arrays are just pointers
+ * - Flexibility: can be used for any data type
+ */
+
+class Array {
+
+    function Array new(int size) {
+        // Validate size
+        if (size < 1) {
+            do Sys.error(2);  // Array size must be positive
+        }
+
+        // Direct delegation to Memory.alloc
+        // Memory.alloc returns base address of allocated block
+        return Memory.alloc(size);
+    }
+
+    method void dispose() {
+        // 'this' is the array base address (not an object reference!)
+        // We simply pass it to Memory.deAlloc
+        do Memory.deAlloc(this);
+        return;
+    }
+}
+
