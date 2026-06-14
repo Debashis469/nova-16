@@ -12,7 +12,7 @@ Nova-16 combines a high-level compiler, virtual machine translator, assembler, m
 - System design and language references: `docs/Nova-16_ A Complete 16-Bit Computer System.pdf`
 - Luma language reference: `docs/The Luma Language Specification.pdf`
 
-[![Nova-16 Demo](docs/architecture.png)](https://your-demo-video-link-here)
+[![Nova-16 Demo](docs/architecture.png)]
 
 🔗 Full demo/video link: https://www.youtube.com/watch?v=kNfhy538wnk
 
