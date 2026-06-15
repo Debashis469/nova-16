@@ -1,5 +1,5 @@
 /**
- * Arrays in Jack are NOT objects with methods!
+ * Arrays in Luma are NOT objects with methods!
  * They are simply contiguous blocks of memory.
  *
  * Key Design Decisions:
